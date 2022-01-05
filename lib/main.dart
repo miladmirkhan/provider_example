@@ -19,10 +19,11 @@ class MyApp extends StatelessWidget {
       create: (context)=> count(),
 
       child: MaterialApp(
-      title: 'Flutter Provider',
       theme: ThemeData(
-        primarySwatch: Colors.purple,
+        primarySwatch: Colors.teal,
+       
       ),
+      
       home:  CountApp()
     ),
     );
@@ -33,6 +34,9 @@ class CountApp extends StatelessWidget {
   
   Widget build(BuildContext context){
 return Scaffold(
+  appBar: AppBar(
+    title: const Text("milad mirkhan majeed"),
+  ),
   body: Center(
     child: Consumer<count>(
       builder: (context,count,child){
